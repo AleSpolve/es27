@@ -79,7 +79,7 @@ public class ListaOpere {
     }
 
     //RICERCA
-    public int researchNodo(String cognome){ 
+    public boolean researchNodo(String cognome){ 
 
         Nodo corrente=testa;
         
@@ -87,15 +87,14 @@ public class ListaOpere {
             
             if(corrente.getOp().getCognomeArtista().equals(cognome)){
                 
-                System.out.println("trovato");
                 
-                return 1;
+                return true;
             }
             
             corrente=corrente.getNext();
         }
-        System.out.println("non trovato");
-        return 0;
+        
+        return false;
     }
 
     //RIMOZIONE
